@@ -1,0 +1,139 @@
+/* Global Reset & Fonts */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom right, #f0f4f8, #d9e2ec);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Page Container */
+.page-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px;
+    padding: 20px;
+}
+
+/* Card Layout */
+.card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    padding: 30px 20px;
+    text-align: center;
+}
+
+/* Title & Subtitle */
+.title {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: 600;
+}
+.subtitle {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+/* Form Section */
+.form-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.custom-file-label {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #007bff;
+    color: #fff;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: background 0.3s ease;
+    font-size: 0.95rem;
+}
+.custom-file-label:hover {
+    background: #0056b3;
+}
+.submit-btn {
+    padding: 10px 20px;
+    background: #28a745;
+    color: #fff;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: background 0.3s ease;
+}
+.submit-btn:hover:not(:disabled) {
+    background: #218838;
+}
+.submit-btn:disabled {
+    background: #6c757d;
+    cursor: not-allowed;
+}
+
+/* Preview Section */
+.preview-section {
+    margin: 20px 0;
+}
+#imagePreview {
+    max-width: 100%;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    transition: transform 0.2s ease;
+}
+#imagePreview:hover {
+    transform: scale(1.02);
+}
+
+/* Spinner */
+.spinner {
+    margin: 20px auto;
+    width: 50px;
+    height: 50px;
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid #007bff;
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+    100% { transform: rotate(360deg); }
+}
+
+/* Result */
+.result {
+    margin-top: 20px;
+    font-size: 1.1rem;
+    color: #333;
+    word-wrap: break-word;
+    text-align: center;
+    padding: 0 10px;
+    line-height: 1.4;
+}
+.result strong {
+    font-weight: 600;
+    color: #222;
+}
+
+/* Responsive */
+@media(max-width: 400px) {
+    .custom-file-label, .submit-btn {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+}
